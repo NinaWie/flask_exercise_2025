@@ -18,6 +18,7 @@ def new_featre():
 @app.route("/welcome_to_flask", methods=["GET"])
 def welcome_to_flask():
     print("all good")
+    print("hello world")
     return jsonify({"message": "Welcome!"})
 
 
