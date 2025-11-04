@@ -71,7 +71,6 @@ def using_post():
 #     ...
 
 # TODO: TASK 2 - one method for increase and one method for decrease value
-# TODO: TASK 2 - one method for increase and one method for decrease value
 @app.route("/increase", methods=["GET"])
 def increase():
     try:
