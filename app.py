@@ -11,8 +11,7 @@ app = Flask(__name__)
 CORS(app, origins=["*", "null"])  # allowing any origin as well as localhost (null)
 
 
-def new_featre():
-    pass
+
 
 
 @app.route("/welcome_to_flask", methods=["GET"])
