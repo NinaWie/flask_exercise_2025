@@ -11,6 +11,10 @@ app = Flask(__name__)
 CORS(app, origins=["*", "null"])  # allowing any origin as well as localhost (null)
 
 
+def new_featre():
+    pass
+
+
 @app.route("/welcome_to_flask", methods=["GET"])
 def welcome_to_flask():
     print("all good")
@@ -22,6 +26,7 @@ def working_with_arguments():
     my_argument = str(request.args.get("name", "default_name"))
     # complex processing
     return jsonify(f"This is how we pass arguments in GET request. My name is {my_argument}")
+
 
 def new_method():
     pass
