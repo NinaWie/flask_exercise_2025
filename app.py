@@ -75,6 +75,13 @@ def round_float():
     return jsonify({"output": rounded})
 
 # TODO: TASK 2 - one method for increase and one method for decrease value
+# TODO: TASK 2 - one method for increase and one method for decrease value
+@app.route("/increase", methods=["GET"])
+def increase():
+    try:
+        input_value = int(request.args.get("value", 0))
+    except ValueError:
+        return jsonify("Invalid input for value")
 
 
 # TODO TASK 3 - POST method to compute sum of list
