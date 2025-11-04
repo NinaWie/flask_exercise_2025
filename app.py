@@ -19,6 +19,7 @@ def welcome_to_flask():
     a = 1 + 4
     print("all perfect")
     print("hello world")
+    print("hallo welt")
     return jsonify({"message": "Welcome!"})
 
 
