@@ -29,9 +29,8 @@ def working_with_arguments():
     # complex processing
     return jsonify(f"This is how we pass arguments in GET request. My name is {my_argument}")
 
+#test_lara 
 
-def new_method():
-    pass
 
 
 @app.route("/add_numbers", methods=["GET"])
