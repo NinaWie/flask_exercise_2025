@@ -11,15 +11,15 @@ app = Flask(__name__)
 CORS(app, origins=["*", "null"])  # allowing any origin as well as localhost (null)
 
 
-def new_featre():
-    pass
+
 
 
 @app.route("/welcome_to_flask", methods=["GET"])
 def welcome_to_flask():
-    a = 1 + 2
+    a = 1 + 4
     print("all perfect")
     print("hello world")
+    print("hallo welt")
     return jsonify({"message": "Welcome!"})
 
 
@@ -29,9 +29,8 @@ def working_with_arguments():
     # complex processing
     return jsonify(f"This is how we pass arguments in GET request. My name is {my_argument}")
 
+#test_lara 
 
-def new_method():
-    pass
 
 
 @app.route("/add_numbers", methods=["GET"])
@@ -66,9 +65,14 @@ def using_post():
 
 
 # TODO: TASK 1
-# @app.route("/round_float", methods=["GET"])
-# def round_float():
-#     ...
+@app.route("/round_float", methods=["GET"])
+def round_float():
+    try:
+        round_float = float(request.args.get("value", 1))
+    except ValueError:
+        return jsonify("Invalid input for num1")
+    rounded= round(round_float,2)
+    return jsonify({"output": rounded})
 
 # TODO: TASK 2 - one method for increase and one method for decrease value
 @app.route("/increase", methods=["GET"])
