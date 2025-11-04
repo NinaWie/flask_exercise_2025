@@ -16,7 +16,7 @@ CORS(app, origins=["*", "null"])  # allowing any origin as well as localhost (nu
 
 @app.route("/welcome_to_flask", methods=["GET"])
 def welcome_to_flask():
-    a = 1 + 2
+    a = 1 + 3
     print("all perfect")
     print("hello world")
     return jsonify({"message": "Welcome!"})
